@@ -4,7 +4,11 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route("/")
+def homepage():
+    """View Homepage"""
 
+    return render_template("root.html")
 
 
 if __name__ == "__main__":
