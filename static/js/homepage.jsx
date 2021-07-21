@@ -1,3 +1,5 @@
+"use strict";
+
 function Homepage(){
     return (
         <React.Fragment>
