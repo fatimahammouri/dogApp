@@ -1,6 +1,7 @@
 """Server for the Doggy App"""
 
 from flask import Flask, render_template
+import requests
 
 app = Flask(__name__)
 
@@ -16,7 +17,7 @@ def breed_list():
 
     url = "https://dog.ceo/api/breeds/list/all"
     
-
+    
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True, port=5000)
