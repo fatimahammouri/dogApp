@@ -29,7 +29,9 @@ function DogBreeds(){
         <React.Fragment>
 
         {breeds.map(breed => <button onClick={() => getImages(breed)}> {breed} </button> )}
-    
+        
+        {images.map(image => <img src={image}></img>)}
+        
         </React.Fragment>
     )
     
