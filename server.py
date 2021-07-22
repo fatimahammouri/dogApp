@@ -28,6 +28,13 @@ def breed_list():
     # breeds are keys in the dictionary value of the data dictionary
     breeds = data["message"].keys()
 
+    # create an empty list/iterate over the keys object/append to the list
+    breeds_list = []
+    
+    for breed in breeds:
+        breeds_list.append(breed)
+    # print(breeds_list)
+
     
 
 if __name__ == "__main__":
