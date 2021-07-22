@@ -41,6 +41,12 @@ def breed_list():
 def breed_images(breed):
     """Get images of dogs from a certain breed from the Dog API"""
 
+    url = f"https://dog.ceo/api/breed/{breed}/images"
+
+    response = requests.get(url)
+    data = response.json()
+    images = data["message"]
+
     
      
 
