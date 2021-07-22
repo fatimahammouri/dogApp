@@ -33,8 +33,9 @@ def breed_list():
 
     for breed in breeds:
         breeds_list.append(breed)
-    # print(breeds_list)
-
+    
+    # return JSON response of the python breeds list
+    return jsonify(breeds_list)
     
 
 if __name__ == "__main__":
