@@ -15,13 +15,21 @@ function DogBreeds(){
         .then((breedData) =>  setBreeds(breedData))
         }, []);
     console.log(breeds)
+    
 
+    function getImages(breed){
 
+        fetch(`/api/${breed}/images`)
+        .then(response => response.json())
+        .then((imagesData) => setImages(imagesData))   
+      }
+      
+      
     return(
         <React.Fragment>
 
-        {breeds.map(breed => <button> {breed} </button> )}
-
+        {breeds.map(breed => <button onClick={() => getImages(breed)}> {breed} </button> )}
+    
         </React.Fragment>
     )
     
