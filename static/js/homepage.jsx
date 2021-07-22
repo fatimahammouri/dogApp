@@ -3,6 +3,9 @@ function DogBreeds(){
     // use Reacts' useState hook to access/update the breeds list 
     const [breeds, setBreeds] = React.useState([]);
 
+    // use Reacts' useState hook to access/update images list
+    const [images, setImages] = React.useState([]);
+
     // use Reacts' useEffect hook to fetch data from server route
     // upon success: parse data as JSON into JS object
     // update the components' state with data
@@ -12,6 +15,7 @@ function DogBreeds(){
         .then((breedData) =>  setBreeds(breedData))
         }, []);
     console.log(breeds)
+
 
     return(
         <React.Fragment>
