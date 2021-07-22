@@ -1,6 +1,6 @@
 """Server for the Doggy App"""
 
-from flask import Flask, render_template, 
+from flask import Flask, render_template 
 import requests
 
 app = Flask(__name__)
@@ -22,6 +22,11 @@ def breed_list():
     # get function from requests library allow to make a GET requests
     response = requests.get(url)
 
+    # .json method parse JSON response from the DOG API as Python dictionary
+    data = response.json()
+
+    # breeds are keys in the dictionary value of the data dictionary
+    breeds = data["message"].keys()
 
     
 
