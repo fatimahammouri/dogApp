@@ -2,7 +2,12 @@
 
  
 function Homepage(){
-    
+    /* Homepage component */
+
+    // use Reacts' useState hook to access/update the breeds list 
+    const [breeds, setBreeds] = React.useState([]);
+
+
     return (
         <React.Fragment>
             <h1>Hi, Doggy</h1>
