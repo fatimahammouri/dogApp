@@ -37,6 +37,12 @@ def breed_list():
     # return JSON response of the python breeds list
     return jsonify(breeds_list)
     
+@app.route("/api/<breed>/images")
+def breed_images(breed):
+    """Get images of dogs from a certain breed from the Dog API"""
+
+    
+     
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True, port=5000)
