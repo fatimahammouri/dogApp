@@ -1,12 +1,7 @@
 "use strict";
-
- 
-function Homepage(){
-    /* Homepage component */
-
+function DogBreeds(){
     // use Reacts' useState hook to access/update the breeds list 
     const [breeds, setBreeds] = React.useState([]);
-
 
     // use Reacts' useEffect hook to fetch data from server route
     // upon success: parse data as JSON into JS object
@@ -18,9 +13,24 @@ function Homepage(){
         }, []);
     console.log(breeds)
 
+    return(
+        <React.Fragment>
+
+        {breeds.map(breed => <li>{breed} </li>)}
+
+        </React.Fragment>
+    )
+    
+}
+ 
+function Homepage(){
+    /* Homepage component */
+
     return (
         <React.Fragment>
             <h1>Hi, Doggy</h1>
+            {/* <Search /> */}
+            <DogBreeds />
         </React.Fragment>
     )
 }
