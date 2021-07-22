@@ -20,7 +20,7 @@ function DogBreeds(){
     return(
         <React.Fragment>
 
-        {breeds.map(breed => <li>{breed} </li>)}
+        {breeds.map(breed => <button> {breed} </button> )}
 
         </React.Fragment>
     )
