@@ -1,6 +1,6 @@
 """Server for the Doggy App"""
 
-from flask import Flask, render_template 
+from flask import Flask, render_template, jsonify 
 import requests
 
 app = Flask(__name__)
@@ -30,7 +30,7 @@ def breed_list():
 
     # create an empty list/iterate over the keys object/append to the list
     breeds_list = []
-    
+
     for breed in breeds:
         breeds_list.append(breed)
     # print(breeds_list)
