@@ -47,6 +47,8 @@ def breed_images(breed):
     data = response.json()
     images = data["message"]
 
+    
+    return jsonify(images[0:4])
      
 
 if __name__ == "__main__":
